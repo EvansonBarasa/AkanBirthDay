@@ -22,14 +22,20 @@
       </div>
       <div class="row background">
         <div class="col-md-12">
-          <p>Form goes here</p>
-          <form>
-              Akan Birthday:<br>
-              <label for="gender">Select Gender: </label>
-              <input type="text" name="converterCtoF" id = "degree"><br>
-              <input type="button" value="Submit" id = "submit"
-               onClick = "tempertureConverter()">
-          </form>
+          <p>
+            <form>
+                Akan Birthday:<br>
+                <label for="gender">Select Birthday: </label>
+                <input type="date" id="dob" name="trip-start" value="2020-05-01" min="1900-01-01" max="2099-12-31"> <br>
+                <label for="gender">Select Gender: </label>
+                <select name="gender" id="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select><br>
+                <input type="button" value="Submit" id = "submit"
+                 onClick = "tempertureConverter()">
+            </form>
+          </p>
         </div>
       </div>
     </div>
