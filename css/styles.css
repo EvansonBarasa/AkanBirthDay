@@ -1,11 +1,11 @@
-.name {
-  color: #FFC300;
-  text-align: center;
+.paragraph {
+  color: #F8F9F9;
+  float: left;
 }
 
-.nameul {
-  color: #FFC300;
-  text-align: left;
+.parag {
+  color: #050505;
+  float: left;
 }
 
 body {
@@ -15,7 +15,10 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
 
+.background{
+  background-color: lightblue;
 }
 
 .sidebar {
@@ -45,38 +48,3 @@ body {
     outline: 0;
     text-decoration-color: #463CDE;
   }
-
-.sidebar a:hover{
-  color:#463CDE;
-}
-
-.rTable {
-   display: table;
-   width: 60%;
-   margin: auto;
-}
-.rTableRow {
-   display: table-row;
-}
-.rTableHeading {
-   display: table-header-group;
-   background-color: #FFC300;
-}
-.rTableCell, .rTableHead {
-   display: table-cell;
-   padding: 2px 3px;
-   border: 1px solid #FFC300;
-}
-.rTableHeading {
-   display: table-header-group;
-   background-color: #FFC300;
-   font-weight: bold;
-}
-.rTableFoot {
-   display: table-footer-group;
-   font-weight: bold;
-   background-color: #FFC300;
-}
-.rTableBody {
-   display: table-row-group;
-}
