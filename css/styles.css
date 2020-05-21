@@ -1,0 +1,82 @@
+.name {
+  color: #FFC300;
+  text-align: center;
+}
+
+.nameul {
+  color: #FFC300;
+  text-align: left;
+}
+
+body {
+  background-image: url("../images/programming.jpeg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+.sidebar {
+  height: 100%;
+  width: 20%;
+  position: fixed!important;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar-yellow{
+  color: #000000 !important;
+  background-color: #FFC300 !important;
+}
+
+.sidebar-block  {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    text-decoration-color: #463CDE;
+  }
+
+.sidebar a:hover{
+  color:#463CDE;
+}
+
+.rTable {
+   display: table;
+   width: 60%;
+   margin: auto;
+}
+.rTableRow {
+   display: table-row;
+}
+.rTableHeading {
+   display: table-header-group;
+   background-color: #FFC300;
+}
+.rTableCell, .rTableHead {
+   display: table-cell;
+   padding: 2px 3px;
+   border: 1px solid #FFC300;
+}
+.rTableHeading {
+   display: table-header-group;
+   background-color: #FFC300;
+   font-weight: bold;
+}
+.rTableFoot {
+   display: table-footer-group;
+   font-weight: bold;
+   background-color: #FFC300;
+}
+.rTableBody {
+   display: table-row-group;
+}
