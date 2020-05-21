@@ -7,6 +7,7 @@ function validateForm() {
 }
 
 function tempertureConverter(){
-    var C = document.getElementById("degree").value;
-    alert((9/5)*C+32);
+    var input = document.getElementById("gender").value;
+    alert(input);
+
 }
