@@ -42,7 +42,7 @@ function processDob(dob){
   var date = new Date(dob).getDay();
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   var day = days[date];
-  if(day == "Sunday"){
+  if(day.toLowerCase() == "Sunday".toLowerCase()){
       alert("Kwasi");
   }else if(day == "Monday"){
       alert("Kwadwo");
