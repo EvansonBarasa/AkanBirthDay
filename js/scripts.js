@@ -11,30 +11,8 @@ function processor(){
 }
 
 function processDob(dob,gender){
-  /*the array is of length 10 2020-05-12*/
-  var arrDate = dob.split("");
-  /*get cc */
-  var centuryOne= arrDate[0];
-  var centuryTwo = arrDate[1];
-  var cc = parseInt(centuryOne+centuryTwo);
-  /*get yy */
-  var yearOne = arrDate[2];
-  var yearTwo = arrDate[3];
-  var yy = parseInt(yearOne+yearTwo);
-  /*get mm */
-  var monthOne = arrDate[5];
-  var monthTwo = arrDate[6];
-  var mm = parseInt(monthOne+monthTwo);
-  /*get dd */
-  var dateOne = arrDate[8];
-  var dateTwo = arrDate[9];
-  var dd = parseInt(dateOne+dateTwo);
-  var dayOfWeek = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
-  /*Array length minus one*/
-  var date = (Math.ceil(dayOfWeek))-parseInt(1);
-  alert(date);
-  /*Alternative method to get the day of the week from date
-  var date = new Date(dob).getDay();*/
+  /*Alternative method to get the day of the week from date*/
+  var date = new Date(dob).getDay();
   /*Array days of the week*/
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   /*Access a spefic date from array days*/
@@ -88,5 +66,55 @@ function femaleNames(akan, day){
       alert(akan+"Ama");
   }else{
     alert("Wrong Date Selected");
+  }
+}
+
+/*This function has a bug can not work with years that starts with Zero e.g. 2002 etc.*/
+function processDobBackUp(dob,gender){
+  /*the array is of length 10 2020-05-12*/
+  var arrDate = dob.split("");
+  /*get cc */
+  var centuryOne= arrDate[0];
+  var centuryTwo = arrDate[1];
+  var cc = parseInt(centuryOne+centuryTwo);
+  /*get yy */
+  var yearOne = arrDate[2];
+  var yearTwo = arrDate[3];
+  var yyString = yearOne+yearTwo;
+  alert(yyString);
+  /*year that starts with 0 like 05, concatnate zero at the start*/
+  if(yyString.toString().startsWith("0")){
+    var yyParse = parseInt(yyString);
+    var yyy = Number("0"+yyParse);
+    var yy = 02;
+    alert(yy);
+  }else{
+    var yy = parseInt(yyString);
+  }
+  /*get mm */
+  var monthOne = arrDate[5];
+  var monthTwo = arrDate[6];
+  var mm = parseInt(monthOne+monthTwo);
+  /*get dd */
+  var dateOne = arrDate[8];
+  var dateTwo = arrDate[9];
+  var dd = parseInt(dateOne+dateTwo);
+  var dayOfWeek = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
+  /*Array length minus one*/
+  var date = (Math.ceil(dayOfWeek))-parseInt(1);
+  /*alert(cc);
+  Alternative method to get the day of the week from date*/
+  /*var date1 = new Date(dob).getDay();*/
+  /*Array days of the week*/
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  /*Access a spefic date from array days*/
+  var day = days[date];
+  var akan = "Your Akan name is: ";
+  if(gender.toString()=="male".toString()){
+      maleNames(akan, day);
+  }else if(gender.toString()=="female".toString()){
+    femaleNames(akan, day);
+  }else{
+    alert("Wrong input");
   }
 }
