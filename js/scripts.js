@@ -4,9 +4,9 @@ function processor(){
     var gender = document.getElementById("gender").value;
     var dob = document.getElementById("dob").value;
     /*checks if gener is male or female*/
-      if(gender == "male"){
+      if(gender.toLowerCase() == "male".toLowerCase()){
           processDob(dob,gender)
-      }else if(gender == "female"){
+      }else if(gender.toLowerCase() == "female".toLowerCase()){
           processDob(dob,gender);
       }else{
           alert("wrong entry");
