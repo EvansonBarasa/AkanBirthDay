@@ -20,31 +20,36 @@ body {
 .background{
   background-color: lightblue;
 }
-
-.sidebar {
-  height: 100%;
-  width: 20%;
-  position: fixed!important;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+input[type=text], select {
+  width: 40%;
+  padding: 4px 4px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 40%;
+  padding: 4px 4px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
-.sidebar-yellow{
-  color: #000000 !important;
-  background-color: #FFC300 !important;
+input[type=submit] {
+  width: 100%;
+  background-color: #0413A4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.sidebar-block  {
-    width: 100%;
-    display: block;
-    padding: 8px 16px;
-    text-align: left;
-    border: none;
-    white-space: normal;
-    float: none;
-    outline: 0;
-    text-decoration-color: #463CDE;
-  }
+input[type=submit]:hover {
+  background-color: #45a049;
+}
