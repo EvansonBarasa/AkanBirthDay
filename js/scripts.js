@@ -1,6 +1,9 @@
+//Entry function from the data submitted from the html form*/
 function processor(){
+  /*get input from the html form*/
     var gender = document.getElementById("gender").value;
     var dob = document.getElementById("dob").value;
+    /*checks if gener is male or female*/
       if(gender == "male"){
           processDob(dob,gender)
       }else if(gender == "female"){
@@ -15,12 +18,14 @@ function processDob(dob,gender){
   var date = new Date(dob).getDay();
   /*Array days of the week*/
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-  /*Access a spefic date from array days*/
+  /*Access a spefic day of the week from array days, using date*/
   var day = days[date];
   var akan = "Your Akan name is: ";
   if(gender.toString()=="male".toString()){
+      /*call to function maleNames to get the make akan name*/
       maleNames(akan, day);
   }else if(gender.toString()=="female".toString()){
+    /*call to function femaleNames to get the make akan name*/
     femaleNames(akan, day);
   }else{
     alert("Wrong input");
