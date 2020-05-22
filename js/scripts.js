@@ -42,7 +42,7 @@ function maleNames(akan, day){
       alert("You were born on: "+day+". "+akan+"Kwabena");
   }else if(day.toLowerCase() == "Wednesday".toLowerCase()){
       alert("You were born on: "+day+". "+akan+"Kwaku");
-  }else if("You were born on: "+day+". "+day.toLowerCase() == "Thursday".toLowerCase()){
+  }else if(day.toLowerCase() == "Thursday".toLowerCase()){
       alert("You were born on: "+day+". "+akan+"Yaw");
   }else if(day.toLowerCase() == "Friday".toLowerCase()){
       alert("You were born on: "+day+". "+akan+"Kofi");
