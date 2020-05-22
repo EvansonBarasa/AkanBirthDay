@@ -1,16 +1,9 @@
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
 function processor(){
     var gender = document.getElementById("gender").value;
     var dob = document.getElementById("dob").value;
       if(gender == "male"){
-          processDob(dob)
           alert(gender);
+          processDob(dob)
       }else if(gender == "female"){
           alert(gender);
       }else{
@@ -25,39 +18,46 @@ function processDob(dob){
   /*get cc */
   var centuryOne= arrDate[0];
   var centuryTwo = arrDate[1];
-  var cc = centuryOne+centuryTwo;
+  var cc = parseInt(centuryOne+centuryTwo);
   /*get yy */
   var yearOne = arrDate[2];
   var yearTwo = arrDate[3];
-  var yy = yearOne+yearTwo;
+  var yy = parseInt(yearOne+yearTwo);
   /*get mm */
   var monthOne = arrDate[5];
   var monthTwo = arrDate[6];
-  var mm = monthOne+monthTwo;
+  var mm = parseInt(monthOne+monthTwo);
   /*get dd */
   var dateOne = arrDate[8];
   var dateTwo = arrDate[9];
-  var dd = dateOne+dateTwo;
-  /*var result = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd) mod 7);*/
-  var date = new Date(dob).getDay();
+  var dd = parseInt(dateOne+dateTwo);
+  var dayOfWeek = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
+  /*Array length minus one*/
+  var date = (Math.ceil(dayOfWeek))-parseInt(1);
+  alert(date);
+  /*Alternative method to get the day of the week from date
+  var date = new Date(dob).getDay();*/
+  /*Array days of the week*/
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  /*Access a spefic date from array days*/
   var day = days[date];
+  var akan = "Your Akan name is: "
+  /*Get name of a male person*/
   if(day.toLowerCase() == "Sunday".toLowerCase()){
-      alert("Kwasi");
-  }else if(day == "Monday"){
-      alert("Kwadwo");
-  }else if(day == "Tuesday"){
-      alert("Kwabena");
-  }else if(day == "Wednesday"){
-      alert("Kwaku");
-  }else if(day == "Thursday"){
-      alert("Yaw");
-  }else if(day == "Friday"){
-      alert("Kofi");
-  }else if(day == "Saturday"){
-      alert("Kwame");
+      alert(akan+"Kwasi");
+  }else if(day.toLowerCase() == "Monday".toLowerCase()){
+      alert(akan+"Kwadwo");
+  }else if(day.toLowerCase() == "Tuesday".toLowerCase()){
+      alert(akan+"Kwabena");
+  }else if(day.toLowerCase() == "Wednesday".toLowerCase()){
+      alert(akan+"Kwaku");
+  }else if(day.toLowerCase() == "Thursday".toLowerCase()){
+      alert(akan+"Yaw");
+  }else if(day.toLowerCase() == "Friday".toLowerCase()){
+      alert(akan+"Kofi");
+  }else if(day.toLowerCase() == "Saturday".toLowerCase()){
+      alert(akan+"Kwame");
   }else{
-    alert("Wrong input");
+    alert("Wrong Date Selected");
   }
-  alert(result);
 }
