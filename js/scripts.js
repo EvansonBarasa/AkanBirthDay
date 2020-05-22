@@ -2,10 +2,8 @@ function processor(){
     var gender = document.getElementById("gender").value;
     var dob = document.getElementById("dob").value;
       if(gender == "male"){
-          alert(gender);
           processDob(dob,gender)
       }else if(gender == "female"){
-          alert(gender);
           processDob(dob,gender);
       }else{
           alert("wrong entry");
@@ -45,7 +43,7 @@ function processDob(dob,gender){
   if(gender.toString()=="male".toString()){
       maleNames(akan, day);
   }else if(gender.toString()=="female".toString()){
-    alert("Inside female");
+    femaleNames(akan, day);
   }else{
     alert("Wrong input");
   }
@@ -67,6 +65,27 @@ function maleNames(akan, day){
       alert(akan+"Kofi");
   }else if(day.toLowerCase() == "Saturday".toLowerCase()){
       alert(akan+"Kwame");
+  }else{
+    alert("Wrong Date Selected");
+  }
+}
+
+/*Get name of a female person*/
+function femaleNames(akan, day){
+  if(day.toLowerCase() == "Sunday".toLowerCase()){
+      alert(akan+"Akosua");
+  }else if(day.toLowerCase() == "Monday".toLowerCase()){
+      alert(akan+"Adwoa");
+  }else if(day.toLowerCase() == "Tuesday".toLowerCase()){
+      alert(akan+"Abenaa");
+  }else if(day.toLowerCase() == "Wednesday".toLowerCase()){
+      alert(akan+"Akua");
+  }else if(day.toLowerCase() == "Thursday".toLowerCase()){
+      alert(akan+"Yaa");
+  }else if(day.toLowerCase() == "Friday".toLowerCase()){
+      alert(akan+"Afua");
+  }else if(day.toLowerCase() == "Saturday".toLowerCase()){
+      alert(akan+"Ama");
   }else{
     alert("Wrong Date Selected");
   }
