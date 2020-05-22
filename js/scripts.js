@@ -35,19 +35,19 @@ function processDob(dob,gender){
 /*Get name of a male person*/
 function maleNames(akan, day){
   if(day.toLowerCase() == "Sunday".toLowerCase()){
-      alert(akan+"Kwasi");
+      alert("You were born on: "+day+". "+akan+"Kwasi");
   }else if(day.toLowerCase() == "Monday".toLowerCase()){
-      alert(akan+"Kwadwo");
+      alert("You were born on: "+day+". "+akan+"Kwadwo");
   }else if(day.toLowerCase() == "Tuesday".toLowerCase()){
-      alert(akan+"Kwabena");
+      alert("You were born on: "+day+". "+akan+"Kwabena");
   }else if(day.toLowerCase() == "Wednesday".toLowerCase()){
-      alert(akan+"Kwaku");
-  }else if(day.toLowerCase() == "Thursday".toLowerCase()){
-      alert(akan+"Yaw");
+      alert("You were born on: "+day+". "+akan+"Kwaku");
+  }else if("You were born on: "+day+". "+day.toLowerCase() == "Thursday".toLowerCase()){
+      alert("You were born on: "+day+". "+akan+"Yaw");
   }else if(day.toLowerCase() == "Friday".toLowerCase()){
-      alert(akan+"Kofi");
+      alert("You were born on: "+day+". "+akan+"Kofi");
   }else if(day.toLowerCase() == "Saturday".toLowerCase()){
-      alert(akan+"Kwame");
+      alert("You were born on: "+day+". "+akan+"Kwame");
   }else{
     alert("Wrong Date Selected");
   }
@@ -56,19 +56,19 @@ function maleNames(akan, day){
 /*Get name of a female person*/
 function femaleNames(akan, day){
   if(day.toLowerCase() == "Sunday".toLowerCase()){
-      alert(akan+"Akosua");
+      alert("You were born on: "+day+". "+akan+"Akosua");
   }else if(day.toLowerCase() == "Monday".toLowerCase()){
-      alert(akan+"Adwoa");
+      alert("You were born on: "+day+". "+akan+"Adwoa");
   }else if(day.toLowerCase() == "Tuesday".toLowerCase()){
-      alert(akan+"Abenaa");
+      alert("You were born on: "+day+". "+akan+"Abenaa");
   }else if(day.toLowerCase() == "Wednesday".toLowerCase()){
-      alert(akan+"Akua");
+      alert("You were born on: "+day+". "+akan+"Akua");
   }else if(day.toLowerCase() == "Thursday".toLowerCase()){
-      alert(akan+"Yaa");
+      alert("You were born on: "+day+". "+akan+"Yaa");
   }else if(day.toLowerCase() == "Friday".toLowerCase()){
-      alert(akan+"Afua");
+      alert("You were born on: "+day+". "+akan+"Afua");
   }else if(day.toLowerCase() == "Saturday".toLowerCase()){
-      alert(akan+"Ama");
+      alert("You were born on: "+day+". "+akan+"Ama");
   }else{
     alert("Wrong Date Selected");
   }
