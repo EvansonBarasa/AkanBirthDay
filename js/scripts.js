@@ -3,16 +3,16 @@ function processor(){
     var dob = document.getElementById("dob").value;
       if(gender == "male"){
           alert(gender);
-          processDob(dob)
+          processDob(dob,gender)
       }else if(gender == "female"){
           alert(gender);
+          processDob(dob,gender);
       }else{
           alert("wrong entry");
       }
 }
 
-function processDob(dob){
-  var dob = document.getElementById("dob").value;
+function processDob(dob,gender){
   /*the array is of length 10 2020-05-12*/
   var arrDate = dob.split("");
   /*get cc */
@@ -41,8 +41,18 @@ function processDob(dob){
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   /*Access a spefic date from array days*/
   var day = days[date];
-  var akan = "Your Akan name is: "
-  /*Get name of a male person*/
+  var akan = "Your Akan name is: ";
+  if(gender.toString()=="male".toString()){
+      maleNames(akan, day);
+  }else if(gender.toString()=="female".toString()){
+    alert("Inside female");
+  }else{
+    alert("Wrong input");
+  }
+}
+
+/*Get name of a male person*/
+function maleNames(akan, day){
   if(day.toLowerCase() == "Sunday".toLowerCase()){
       alert(akan+"Kwasi");
   }else if(day.toLowerCase() == "Monday".toLowerCase()){
